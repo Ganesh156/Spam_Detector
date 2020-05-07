@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/style.css') }}">
+    <title>Spam Detector</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h2>Spam Detector for SMS</h2>
+        </div>
+    </header>
+    <div class="m1-container">
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Your Message Here</p>
+            <textarea name="message" rows="4" cols="50"></textarea>
+            <br />
+
+            <input type="submit" class="btn-info" value="predict">
+
+        </form>
+    </div>
+</body>
+
+</html>
